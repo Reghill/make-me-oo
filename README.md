@@ -26,3 +26,14 @@ He thought it'll be a good idea to convert this to Object Oriented Programming. 
 However, his trainer told him that what he did is not Object Oriented programming and asked Shivam to try again. 
 - Try to articulate problems with Shivam's OOP solution. (Write it somewhere and share it with your trainer)
 - Fork the project and fix the design related problem with Shivam's OOP solution. Share that with your trainer too.
+
+
+**Problem Articulation**
+
+Some of the problems in Shivam's OOP solution are listed below:
+* `final` keyword is not used for the properties of Point `x` and `y` . It should have been used because if the properties x and y are changed, then it would become a different `point` altogether. 
+* Unused setters are implemented in Point.java
+* There are no behaviours in `Point.java`. The distance calculation is between two points and direction is with respect to two points. 
+  Also, the calculation is done in `DistanceAndDirectionCalculator` class by getting Point values using getters. This should not be done by the principle of `Tell Don't Ask`.
+  Hence distance and direction calculation should have been done in Point.java.
+* Thus, `DistanceAndDirectionCalculator.java` is not required and could be deleted. 
