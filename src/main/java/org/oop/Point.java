@@ -15,4 +15,9 @@ public class Point {
         return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
     }
 
+    public double direction(Point to) {
+        double xDistance = to.x - x;
+        double yDistance = to.y - y;
+        return Math.atan2(yDistance, xDistance);
+    }
 }
