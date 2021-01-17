@@ -10,16 +10,22 @@ public class Point {
     }
 
     public double distance(Point to) {
-        double xDistance = to.x - x;
-        double yDistance = to.y - y;
-        double distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-        return distance;
+        double xDistance = xDistance(to);
+        double yDistance = yDistance(to);
+        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+    }
+
+    private double xDistance(Point to) {
+        return to.x - x;
     }
 
     public double direction(Point to) {
-        double xDistance = to.x - x;
-        double yDistance = to.y - y;
-        double direction = Math.atan2(yDistance, xDistance);
-        return direction;
+        double xDistance = xDistance(to);
+        double yDistance = yDistance(to);
+        return Math.atan2(yDistance, xDistance);
+    }
+
+    private double yDistance(Point to) {
+        return to.y - y;
     }
 }
