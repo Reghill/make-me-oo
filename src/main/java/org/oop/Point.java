@@ -12,12 +12,14 @@ public class Point {
     public double distance(Point to) {
         double xDistance = to.x - x;
         double yDistance = to.y - y;
-        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+        double distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+        return distance;
     }
 
     public double direction(Point to) {
         double xDistance = to.x - x;
         double yDistance = to.y - y;
-        return Math.atan2(yDistance, xDistance);
+        double direction = Math.atan2(yDistance, xDistance);
+        return direction;
     }
 }
